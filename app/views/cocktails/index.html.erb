@@ -1,0 +1,22 @@
+<%= render "./shared/navbar" %>
+
+<div class="home-banner">
+  <h1>My Cocktails</h1>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit" * 100 %>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+  <li><%= link_to cocktail.name, cocktail%></li>
+  <%end%>
+</ul>
+
+<%= link_to 'New Cocktail', new_cocktail_path%>
+
